@@ -18,14 +18,15 @@ jobs:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ runner.os }}-node-    
     - name: Build
       run: |
         npm install
         npm run-script deploy
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: ErdelyiLivi/pet-ui@releases/1.1.0
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: dist/pet-ui
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: build # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
