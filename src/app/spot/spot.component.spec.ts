@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { SpotComponent } from './spot.component';
@@ -12,7 +12,7 @@ describe('SpotComponent', () => {
   let component: SpotComponent;
   let fixture: ComponentFixture<SpotComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SpotComponent ],
       imports: [RouterTestingModule, HttpClientTestingModule, MatTableModule, MatIconModule, MatCheckboxModule]

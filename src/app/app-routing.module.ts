@@ -16,7 +16,8 @@ const routes: Routes = [
   declarations: [],
   imports: [
     // CommonModule,
-    RouterModule.forRoot(routes)
+    // CommonModule,
+RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })
   ],
   exports: [ RouterModule ]
 })
