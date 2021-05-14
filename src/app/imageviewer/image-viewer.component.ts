@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from 'ngx-gallery';
+// import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from 'ngx-gallery';
 import {SpotService} from '../spot.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FileUploader} from 'ng2-file-upload';
@@ -11,8 +11,8 @@ import {FileUploader} from 'ng2-file-upload';
 })
 export class ImageViewerComponent implements OnInit {
 
-  galleryOptions: NgxGalleryOptions[];
-  galleryImages: NgxGalleryImage[] = [];
+  //galleryOptions: NgxGalleryOptions[];
+  //galleryImages: NgxGalleryImage[] = [];
   spotId: string;
 
   @ViewChild('fileInput', { static: true }) fileInput: ElementRef;
@@ -34,7 +34,7 @@ export class ImageViewerComponent implements OnInit {
         this.router.navigate(['/imageviewer/', this.spotId]));
     };
 
-    this.galleryOptions = [
+    /*this.galleryOptions = [
       {
         width: '600px',
         height: '400px',
@@ -56,14 +56,14 @@ export class ImageViewerComponent implements OnInit {
         breakpoint: 400,
         preview: false
       }
-    ];
+    ];*/
 
     this.spotService.getImagesBySpotId(this.spotId).subscribe(data => {
-      data.forEach(image => this.galleryImages.push({
+      /*data.forEach(image => this.galleryImages.push({
         small: image.url,
         medium: image.url,
         big: image.url
-      }));
+      }));*/
 
     });
   }

@@ -18,7 +18,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ImageViewerComponent } from './imageviewer/image-viewer.component';
-import {NgxGalleryModule} from 'ngx-gallery';
 import {FileUploadModule} from 'ng2-file-upload';
 import {MatCheckboxModule} from "@angular/material/checkbox";
 
@@ -44,7 +43,6 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
         BrowserAnimationsModule,
         MatSelectModule,
         ReactiveFormsModule,
-        NgxGalleryModule,
         FileUploadModule,
         MatCheckboxModule
     ],
