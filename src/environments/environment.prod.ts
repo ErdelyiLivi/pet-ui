@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: '',
+  baseHref: 'https://erdelyilivi.github.io/pet-ui/'
 };
